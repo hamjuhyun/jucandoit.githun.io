@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+}
+
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin: 0 40px;
+}
+
+li a {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  text-align: center;
+  transform: rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: .5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, .5);
+}
+
+li a:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transition: .5s;
+  transform: rotate(0) skewY(-45deg);
+}
+
+li a:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transition: .5s;
+  transform: rotate(0) skewX(-45deg);
+}
+
+li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, .5);
+}
+
+li a .fa {
+  font-size: 40px;
+  color: #262626;
+  line-height: 80px;
+  transition: .5s;
+}
+
+li:nth-child(1) a {
+  background: #3b5599;
+}
+
+li:hover:nth-child(1) a:before {
+  background: #2e4a86;
+}
+
+li:hover:nth-child(1) a:after {
+  background: #4a69ad;
+}
+
+li:nth-child(2) a {
+  background: #55acee;
+}
+
+li:hover:nth-child(2) a:before {
+  background: #4184b7;
+}
+
+li:hover:nth-child(2) a:after {
+  background: #4d9fde;
+}
+
+li:nth-child(3) a {
+  background: #dd4b39;
+}
+
+li:hover:nth-child(3) a:before {
+  background: #c13929;
+}
+
+li:hover:nth-child(3) a:after {
+  background: #e8432e;
+}
+
+li:nth-child(4) a {
+  background: #0077b5;
+}
+
+li:hover:nth-child(4) a:before {
+  background: #036aa0;
+}
+
+li:hover:nth-child(4) a:after {
+  background: #0d82bf;
+}
+
+li:nth-child(5) a {
+  background: #e4405f;
+}
+
+li:hover:nth-child(5) a:before {
+  background: #d02d4c;
+}
+
+li:hover:nth-child(5) a:after {
+  background: #f1395c;
+}
+
+ul li:hover .fa {
+  color: #fff;
+}

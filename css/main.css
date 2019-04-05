@@ -259,8 +259,13 @@ input[type="search"]::-webkit-search-cancel-button {
   text-align: center;
 }
 
+.lst_project > .lst_menu {
+  display: flex;
+}
+
 .lst_project img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 .lst_project .txt {

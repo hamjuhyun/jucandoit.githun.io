@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .box {
+  text-align: center;
+}
+
+.container .icon .far,
+.container .icon .fas {
+  font-size: 80px;
+}
+
+.container .box h4 {
+  overflow: hidden;
+  position: relative;
+  font-weight: 400;
+  margin: 0;
+  padding: 2px 5px;
+  font-size: 24px;
+  transition-delay: .3s;
+  color: transparent;
+}
+
+.container .box .tit {
+  font-weight: 600;
+  margin: 5px 0;
+  font-style: 300;
+}
+
+.container .box .far:hover ~ h4,
+.container .box .fas:hover ~ h4 {
+  color: #000;
+}
+
+.container .box .tit:before,
+.container .box .info:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: #00bcd4;
+  transition: 1s;
+}
+
+.container .box .tit:before {
+  left: initial;
+  right: 100%;
+  background: #9c27b0;
+}
+
+.container .box .far:hover ~ .info:before,
+.container .box .fas:hover ~ .info:before {
+  left: -100%;
+}
+
+.container .box .far:hover ~ .tit:before,
+.container .box .fas:hover ~ .tit:before {
+  left: initial;
+  right: -100%;
+}
+
