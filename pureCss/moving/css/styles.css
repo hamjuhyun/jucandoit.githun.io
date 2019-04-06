@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  position: relative;
+  height: 100vh;
+  background: #00fdff url("../images/street.jpg");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: moving 15s linear infinite;
+}
+
+.bg img {
+  position: absolute;
+  bottom: 2.6rem;
+  right: 100px;
+  width: 300px;
+  height: 300px;
+}
+
+@keyframes moving {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .bg img {
+    width: 100px;
+    height: 100px;
+  }
+}
