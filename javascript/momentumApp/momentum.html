@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,22 @@
   <link rel="stylesheet" href="css/momentum.css">
 </head>
 <body>
-  <div class="clock">
-    <h1>00:00</h1>
+  <div class="niceToday">
+    <div class="clock">
+      <h1>00:00</h1>
+    </div>
+    <form class="form">
+      <input type="text" placeholder="이름이 뭐니~~?">
+    </form>
+    <h2 class="greetings"></h2>
+    <form class="toDoForm">
+      <input type="text" placeholder="오늘 할일을 적어봐요~">
+    </form>
+    <ul class="toDoList"></ul>
   </div>
-  <form class="form">
-    <input type="text" placeholder="Hello! what is your name?">
-  </form>
-  <h2 class="greetings"></h2>
-  <form class="todoForm">
-    <input type="text" placeholder="write a to do!!">
-  </form>
-  <ul class="toDoList"></ul>
   <script src="js/clock.js"></script>
   <script src="js/greeting.js"></script>
   <script src="js/todo.js"></script>
+  <script src="js/backGround.js"></script>
 </body>
 </html>
