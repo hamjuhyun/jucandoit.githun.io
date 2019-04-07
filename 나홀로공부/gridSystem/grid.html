@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid</title>
+  <style>
+    ul, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .father {
+      display: grid;
+      grid-auto-rows: 200px;
+      grid-gap: 5px;
+      grid-template-areas: "header header header"
+                            "content content sidebar"
+                            "content content sidebar"
+                            "footer footer footer"
+    }
+
+    .box {
+      background-color: #f1c40f;
+    }
+
+    .first {
+      grid-area: header;
+      background-color: #f1c40f;
+    }
+
+    .second {
+      grid-area: sidebar;
+      background-color: #27ae60;
+    }
+
+    .third {
+      grid-area: footer;
+      background-color: #3498db;
+    }
+
+    .fourth {
+      grid-area: content;
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="box first"></div>
+    <div class="box second"></div>
+    <div class="box third"></div>
+    <div class="box fourth"></div>
+  </div>
+
+  <ul>
+    <li>box가 더 많을때 grid-auto-rows를 쓰면 아래로 박스들이 달라붙음. ex> grid-auto-rows: 60px; </li>
+    <li>auto-rows/ auto-colums 수직, 수평 정렬을 정할 수 있음!</li>
+    <li>grid-template-area 활용</li>
+  </ul>
+</body>
+</html>
