@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>minmax, max-content, min-content</title>
+  <style>
+    .father {
+      display: grid;
+      /* grid-auto-rows: 200px; */
+      grid-gap: 5px;
+      /* grid-template-columns: max-content repeat(3, 1fr); */
+      grid-template-columns: min-content repeat(3, 1fr);
+    }
+
+    .first {
+      background-color: #f1c40f;
+    }
+
+    .second {
+      background-color: #27ad60;
+    }
+
+    .third {
+      background-color: #3498db;
+    }
+
+    .fourth {
+      background-color: #d35400;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="box first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati tempora nihil veniam esse totam velit minima, vel, illum pariatur, porro id? Voluptatum ipsum, praesentium aspernatur quas quis nemo magnam?</div>
+    <div class="box second"></div>
+    <div class="box third"></div>
+    <div class="box fourth"></div>
+  </div>
+</body>
+</html>
