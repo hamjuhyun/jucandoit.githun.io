@@ -172,17 +172,17 @@ aside#sidebar {
   margin-top: 10px;
 }
 
-aside#sidebar .quote input,
-aside#sidebar .quote textarea {
+.quote input,
+.quote textarea {
   width: 90%;
   height: 30px;
 }
 
-aside#sidebar .quote textarea {
+.quote textarea {
   height: initial;
 }
 
-aside#sidebar .quote button {
+.quote button {
   width: 92%;
 }
 
@@ -206,4 +206,44 @@ footer {
   color: #fff;
   background-color: #e8491d;
   text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header #branding,
+  header nav,
+  #newsletter h3,
+  #newsletter form,
+  #boxes .box,
+  article#mainCol,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header nav {
+    padding-top: 20px;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  #showcase h2 {
+    margin-top: 40px;
+  }
+
+  #newsletter button,
+  .quote button {
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"],
+  .quote input[type="text"],
+  .quote textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
