@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container .title {
+  display: block;
+  margin: 30px 0;
+  font-size: 30px;
+}
+
+.slideWrap1 {
+  position: relative;
+  width: 1200px;
+  height: 640px;
+}
+
+.slideWrap1 .slider {
+  position: relative;
+  width: 500%;
+  height: 570px;
+  animation: slider 10s linear infinite;
+}
+
+.slideWrap1 .slide {
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+.slideWrap1 .slide p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 6em;
+  color: #fff;
+  background: rgba(0, 0, 0, .6);
+}
+
+.slideWrap1 .slide {
+  background-size: cover;
+}
+
+.slideWrap1 .slide:nth-child(1) {
+  background: url(../img/bg1.jpg);
+}
+
+.slideWrap1 .slide:nth-child(2) {
+  background: url(../img/bg2.jpg);
+}
+
+.slideWrap1 .slide:nth-child(3) {
+  background: url(../img/bg3.jpg);
+}
+
+.slideWrap1 .slide:nth-child(4) {
+  background: url(../img/bg4.jpg);
+}
+
+.slideWrap1 .slide:nth-child(5) {
+  background: url(../img/bg5.jpg);
+}
+
+.slideWrap2 {
+  position: relative;
+  width: 80%;
+  height: 0;
+  margin: 0 auto;
+  padding-bottom: 40%;
+  border: 10px solid #2c2c2c;
+}
+
+.slideWrap2 .slideImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slideWrap2 .slideImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  display: none;
+}
+
+.pre ,
+.next {
+  width: 12%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(88, 88, 88, .4);
+  z-index: 99;
+  cursor: pointer;
+}
+
+.pre {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.nav {
+  width: 100%;
+  height: 11px;
+  bottom: 12%;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+}
+
+.dots {
+  top: -5px;
+  width: 18px;
+  height: 18px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  background: rgba(0, 0, 0, .6);
+}
+
+.slideImg {
+  z-index: -1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three {
+  z-index: 9;
+}
+
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3 {
+  background: #fff;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+
+  16% {
+    left: 0;
+  }
+
+  20% {
+    left: -100%;
+  }
+
+  36% {
+    left: -100%;
+  }
+
+  40% {
+    left: -200%;
+  }
+
+  56% {
+    left: -200%;
+  }
+
+  60% {
+    left: -300%;
+  }
+
+  76% {
+    left: -300%;
+  }
+
+  80% {
+    left: -400%;
+  }
+
+  96% {
+    left: -400%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
