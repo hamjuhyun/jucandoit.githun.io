@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamjuhyun/jucandoit91.git"
+  },
+  "author": "ham ju hyun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamjuhyun/jucandoit91/issues"
+  },
+  "homepage": "https://github.com/hamjuhyun/jucandoit91#readme",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^4.0.2"
+  }
+}
