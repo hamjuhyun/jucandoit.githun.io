@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/hamjuhyun/jucandoit91#readme",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
   "devDependencies": {
     "gulp-sass": "^4.0.2"
   }
