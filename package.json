@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hamjuhyun/jucandoit91#readme",
   "keywords": [],
   "dependencies": {
+    "ejs": "^2.6.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
