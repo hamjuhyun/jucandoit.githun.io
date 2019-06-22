@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .tabWrapper {
+      width: 900px;
+      margin: 0 auto;
+    }
+
+    .tabList {
+
+    }
+
+    .tabList li {
+      background: #fff;
+      color: #000;
+    }
+
+    .tabList ul {
+      display: table;
+    }
+
+    .tabList li {
+      display: table-cell;
+      width: 100px;
+      height: 50px;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .tabList li.on a {
+      background: #000;
+      color: #fff;
+    }
+
+    .tabList li a {
+      display: block;
+      margin-left: -1px;
+      border: 1px solid #000;
+    }
+
+    .tabCont .cont {
+      display: none;
+    }
+
+    .tabCont .cont.on {
+      display: block;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="tabWrapper">
+    <div class="tabList">
+      <ul>
+        <li class="on"><a href="#" data-target-group="tabCont" data-target-class="cont">탭1</a></li>
+        <li><a href="#" data-target-group="tabCont" data-target-class="cont">탭2</a></li>
+        <li><a href="#" data-target-group="tabCont" data-target-class="cont">탭3</a></li>
+      </ul>
+    </div>
+    <div class="tabCont">
+      <div class="cont on">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure molestias fugit veniam, cumque architecto nulla? Adipisci voluptate aliquam est assumenda nam blanditiis quos ab et! Porro sunt deserunt facilis eveniet?</div>
+      <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a incidunt earum recusandae. Consequuntur, repudiandae corrupti amet deleniti sequi velit at ipsa facere quis, laborum hic totam dolorum odit reiciendis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis commodi cumque modi repellendus nobis quis, doloremque doloribus aliquid voluptatum omnis sequi dolorem, sed, quae eum eaque natus dignissimos magni?
+      </div>
+      <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis commodi cumque modi repellendus nobis quis, doloremque doloribus aliquid voluptatum omnis sequi dolorem, sed, quae eum eaque natus dignissimos magni?Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis commodi cumque modi repellendus nobis quis, doloremque doloribus aliquid voluptatum omnis sequi dolorem, sed, quae eum eaque natus dignissimos magni?Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis commodi cumque modi repellendus nobis quis, doloremque doloribus aliquid voluptatum omnis sequi dolorem, sed, quae eum eaque natus dignissimos magni?</div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    (function($) {
+      $.extend($.fn , {
+        switchTab: function () {
+            var $tabEl = $(this);
+
+            var targetGroup = $tabEl.data('targetGroup');
+            var targetClass = $tabEl.data('targetClass');
+
+            var $targetEl = $('.' + targetGroup).find('.' + targetClass);
+
+            if ($tabEl.length !== $targetEl.length) {
+                return;
+            }
+
+            var defaults = {
+                eventType: 'click',
+                preventDefault: true
+            }
+
+            var options = $.extend({}, defaults);
+
+            var tabChange = function (e) {
+                if (options.preventDefault) {
+                    e.preventDefault();
+                }
+
+                var $this = $(this);
+                var tabIndex = $this.parent().index();
+
+                $this.parent().addClass('on').siblings().removeClass('on');
+                $targetEl.eq(tabIndex).addClass('on').siblings().removeClass('on');
+
+            }
+
+            $tabEl.on(options.eventType, tabChange);
+        }
+      });
+
+       $(document).ready(function() {
+        $('.tabList li a').switchTab();
+      })
+    })(jQuery);
+  </script>
+</body>
+</html>
