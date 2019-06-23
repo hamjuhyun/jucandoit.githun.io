@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Back to top 스크롤 이벤트, 자동스크롤</title>
+  <link rel="stylesheet" href="../../reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="contains">
+    <header id="top">
+      <h1>Moby Dick</h1>
+      <h2>by Herman Melville</h2>
+    </header>
+    <main>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptatibus delectus alias laborum, minus voluptatum eius dolor odit consequatur? Mollitia asperiores laborum non quo dolor fuga libero illo pariatur in.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel molestias reprehenderit provident laudantium officiis recusandae corrupti dolorem facere, vero explicabo? Necessitatibus maiores fugit, sint nostrum ipsum quidem officiis soluta a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consectetur culpa nesciunt dolores eius quidem dicta, facere distinctio, necessitatibus mollitia dignissimos provident voluptatibus, vel sed nihil praesentium ex libero voluptatem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, ipsam. Excepturi magni eveniet ratione dignissimos debitis sint molestias veritatis id distinctio explicabo sit deleniti, quos odio voluptate? Incidunt, cupiditate impedit!</p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quaerat quibusdam obcaecati omnis sit iure eaque voluptate, quisquam quam corrupti porro explicabo necessitatibus facere. Natus accusantium rem facere maiores corrupti?
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quaerat quibusdam obcaecati omnis sit iure eaque voluptate, quisquam quam corrupti porro explicabo necessitatibus facere. Natus accusantium rem facere maiores corrupti?
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel molestias reprehenderit provident laudantium officiis recusandae corrupti dolorem facere, vero explicabo? Necessitatibus maiores fugit, sint nostrum ipsum quidem officiis soluta a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consectetur culpa nesciunt dolores eius quidem dicta, facere distinctio, necessitatibus mollitia dignissimos provident voluptatibus, vel sed nihil praesentium ex libero voluptatem? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, ipsam. Excepturi magni eveniet ratione dignissimos debitis sint molestias veritatis id distinctio explicabo sit deleniti, quos odio voluptate? Incidunt, cupiditate impedit!</p>
+    </main>
+    <footer>
+      <p><small><em>Typography and color scheme based on</em></small></p>
+      <a id="back-to-top" href="#">TOP</a>
+    </footer>
+  </div>
+
+  <script>
+    // 변수 지정하기
+    // 문서의 높이를 계산하고, 원하는 부분이 상단에서 얼마나 떨어진지 offset 값 구하기
+    // 스크롤과 클릭 이벤트 작성하기
+
+    var btt = document.getElementById('back-to-top');
+    var docElem = document.documentElement;
+    var offset;
+    var scrollPos;
+    var docHeight;
+
+    // 문서 높이 구하기
+    docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
+
+    if (docHeight != 'undefined') {
+      offset = docHeight / 4;
+    }
+
+    window.addEventListener('scroll', scrollFn);
+
+    function scrollFn() {
+      scrollPos = docElem.scrollTop;
+      btt.className = (scrollPos > offset) ? 'visible': '';
+    }
+
+    btt.addEventListener('click', topMove);
+
+    function topMove(event) {
+      event.preventDefault();
+      // docElem.scrollTop = 0;
+
+      scrollToTop();
+    }
+
+    function scrollToTop() {
+      var scrollInterval = setInterval(function() {
+        if (scrollPos != 0) {
+          window.scrollBy(0, -55);
+        } else {
+          clearInterval(scrollInterval);
+        }
+
+      },15);
+    }
+  </script>
+</body>
+</html>

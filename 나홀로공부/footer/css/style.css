@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  display: block
+}
+
+ul,ol {
+  list-style: none
+}
+
+blockquote,q {
+  quotes: none
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+  content: "";
+  content: none;
+}
+
+em,dfn,i {
+  font-style: normal
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold
+}
+
+del {
+  text-decoration: line-through
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+hr {
+  display: none
+}
+
+input,select {
+  vertical-align: middle
+}
+
+input {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0
+}
+
+input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner {
+  outline: 0
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0
+}
+
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0
+}
+
+input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-results-button,input[type="search"]::-webkit-search-results-decoration {
+  display: none
+}
+
+button::-moz-focus-inner,select::-moz-focus-inner {
+  outline: 0
+}
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: "Noto Sans KR",-apple-system,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: 300
+}
+
+#container {
+  max-width: 128rem;
+  min-width: 64rem;
+  margin: 0 auto
+}
+
+a,img,button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+
+.blind {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden
+}
+
+.intFooter .footerWrap {
+  padding: 15px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.intFooter .footMenuArea ul {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.intFooter .footMenuArea li {
+  display: table-cell;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.intFooter .footMenuArea li a {
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  color: #444;
+  background-color: #e5e5e5;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.intFooter .footInfoArea {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.intFooter .footInfoArea .btnInfo {
+  display: block;
+  font-size: 10px;
+  color: #666;
+  vertical-align: middle
+}
+
+.intFooter .footInfoArea .btnInfo span {
+  position: relative;
+  padding: 0 5px;
+}
+
+.intFooter .footInfoArea .btnInfo span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 10px;
+  background: #666;
+}
+
+.intFooter .footInfoArea .btnInfo span:first-child:before {
+  display: none;
+}
+
+.intFooter .footInfoArea .btnInfo .btn:after {
+  content: "";
+  display: inline-block;
+  margin: 0 0 -1px 9px;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.intFooter .footInfoArea .footInfo {
+  margin-top: 25px;
+}
+
+.intFooter .footInfoArea .footInfo dl {
+  display: table;
+  margin-top: 5px;
+  text-align: left;
+  color : #808080;
+}
+
+.intFooter .footInfoArea .footInfo dt {
+  display: table-cell;
+  width: 87px;
+}
+
+.intFooter .footInfoArea .footInfo .tel span:nth-child(2) {
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #808080;
+}
+
+.intFooter .footPolicy {
+  margin-top: 18px;
+}
+
+.intFooter .footPolicy ul {
+  margin-left: -6px;
+}
+
+.intFooter .footPolicy li {
+  display: inline-block;
+  padding: 0 6px;
+  border-left: 1px solid #e5e5e5;
+}
+
+.intFooter .footPolicy li:first-chlid {
+  border-left: 0;
+}
+
+.intFooter .footPolicy li a {
+  color: #666;
+}
+
+.intFooter .footNotice {
+  margin-top: 17px;
+  text-align: center;
+  color: #666;
+}
+
+.intFooter .footNotice p {
+  font-size: 9px;
+}
+
+/* 맨 마지막 좀 이상함 글씨가 안맞음.... ㅠㅠ*/

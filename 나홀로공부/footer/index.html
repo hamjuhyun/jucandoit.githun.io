@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- <div class="conts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur explicabo magni a optio repellat. Commodi cumque eius labore tempore vero sit nostrum provident quibusdam laborum. Accusantium doloribus dolore doloremque ratione?</div> -->
+  <footer class="intFooter">
+    <div class="footerWrap">
+      <h3 class="blind">인터파크 사업자 연락정보 및 약관</h3>
+      <div class="footMenuArea">
+        <ul>
+          <li><a href="#">로그아웃</a></li>
+          <li><a href="#">PC버전</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </div>
+      <div class="footInfoArea">
+        <a href="#" class="btnInfo" onclick="footInfoToggle()">
+          <span>(주)인터파크 사업자 정보</span>
+          <span class="btn">고객센터</span>
+        </a>
+        <div class="footInfo" style="display: none;">
+          <dl>
+            <dt>대표이사</dt>
+            <dd>강동화, 김양선</dd>
+          </dl>
+          <dl>
+            <dt>주소</dt>
+            <dd>서울특별시 강남구 삼성로512 삼성동빌딩 10층 </dd>
+          </dl>
+          <dl>
+            <dt>사업자등록번호</dt>
+            <dd>214-87-98889</dd>
+          </dl>
+          <dl>
+            <dt>통신판매업신고</dt>
+            <dd>서울강남 02549호</dd>
+          </dl>
+          <dl>
+            <dt>고객센터</dt>
+            <dd>
+              <p class="tel">
+                <span>쇼핑 1588-1555</span>
+                <span>도서 1577-2555</span>
+              </p>
+              <p class="tel">
+                <span>티켓 1544-1555</span>
+                <span>투어 1588-3443</span>
+              </p>
+              <p>해외항공전용 02-3479-4399</p>
+              <p>국내항공전용 02-3479-4340</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>이메일</dt>
+            <dd>이메일 helpdesk@interpark.com</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="footPolicy">
+        <ul>
+          <li><a href="#">이용/여행약관</a></li>
+          <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+          <li><a href="#">사업자정보확인</a></li>
+          <li><a href="#">보험가입내역</a></li>
+        </ul>
+      </div>
+      <div class="footNotice">
+        <p>(주)인터파크는 통신판매중개자로서 통신판매의 당사자가 아니므로 개별 <br> 판매자가 등록한 오픈마켓 상품에 대해서 (주)인터파크는 일체 책임을 지지 않습니다.</p>
+        <p>Copyright © INTERPARK All Rights Reserved </p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function footInfoToggle() {
+      var footInfo = document.getElementsByClassName('footInfo')[0];
+
+      if (footInfo.style.display === 'none') {
+        footInfo.style.display = 'block';
+      } else {
+        footInfo.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
