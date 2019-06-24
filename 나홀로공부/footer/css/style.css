@@ -142,15 +142,47 @@ a,img,button {
 }
 
 .intFooter .footMenuArea ul {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+  display: flex;
+  justify-content: space-between;
 }
 
 .intFooter .footMenuArea li {
-  display: table-cell;
-  padding: 0 15px;
-  box-sizing: border-box;
+  flex-grow: 1;
+  padding: 0 8px;
+}
+
+.intFooter .footMenuArea li:first-child {
+  padding-left: 0;
+}
+
+.intFooter .footMenuArea li:last-child {
+  padding-right: 0;
+}
+
+.intFooter .footTelArea {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.intFooter .footTelArea li {
+  display: inline-block;
+  position: relative;
+  padding: 0 9px;
+  font-size: 12px;
+}
+
+.intFooter .footTelArea li:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 1px;
+  height: 12px;
+  background: #666;
+}
+
+.intFooter .footTelArea li:first-child:before {
+  display: none;
 }
 
 .intFooter .footMenuArea li a {
@@ -165,44 +197,56 @@ a,img,button {
 }
 
 .intFooter .footInfoArea {
-  margin-top: 22px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .intFooter .footInfoArea .btnInfo {
-  display: block;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  padding-right: 15px;
   font-size: 10px;
   color: #666;
-  vertical-align: middle
+  vertical-align: top;
+  border: 0;
+  background: transparent;
 }
 
-.intFooter .footInfoArea .btnInfo span {
-  position: relative;
-  padding: 0 5px;
-}
-
-.intFooter .footInfoArea .btnInfo span:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 10px;
-  background: #666;
+.intFooter .footInfoArea .btnInfo.open:before {
+  transform: rotate(-135deg);
 }
 
 .intFooter .footInfoArea .btnInfo span:first-child:before {
   display: none;
 }
 
-.intFooter .footInfoArea .btnInfo .btn:after {
+.intFooter .footInfoArea .btnInfo:after {
   content: "";
-  display: inline-block;
-  margin: 0 0 -1px 9px;
+  margin: 0 0 -1px 0;
   width: 12px;
   height: 12px;
   background: #000;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.intFooter .footInfoArea .btnInfo:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  border: 1px solid #fff;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  width: 4px;
+  height: 4px;
+  z-index: 1;
+  transform-origin: 70% 70%;
+  transition: all .3s;
 }
 
 .intFooter .footInfoArea .footInfo {
@@ -210,21 +254,36 @@ a,img,button {
 }
 
 .intFooter .footInfoArea .footInfo dl {
-  display: table;
+  overflow: hidden;
   margin-top: 5px;
   text-align: left;
   color : #808080;
 }
 
 .intFooter .footInfoArea .footInfo dt {
-  display: table-cell;
   width: 87px;
+  float: left;
 }
 
-.intFooter .footInfoArea .footInfo .tel span:nth-child(2) {
-  margin-left: 5px;
-  padding-left: 5px;
-  border-left: 1px solid #808080;
+.intFooter .footInfoArea .footInfo dd {
+  padding-left: 87px;
+}
+
+.intFooter .footInfoArea .footInfo dd span {
+  display: inline-block;
+}
+
+.intFooter .footInfoArea .bar {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #666;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.intFooter .footInfoArea .footInfo a {
+  color: #666;
 }
 
 .intFooter .footPolicy {
@@ -258,5 +317,3 @@ a,img,button {
 .intFooter .footNotice p {
   font-size: 9px;
 }
-
-/* 맨 마지막 좀 이상함 글씨가 안맞음.... ㅠㅠ*/

@@ -14,16 +14,24 @@
       <h3 class="blind">인터파크 사업자 연락정보 및 약관</h3>
       <div class="footMenuArea">
         <ul>
-          <li><a href="#">로그아웃</a></li>
+          <li><a href="#">APP설치</a></li>
+          <li><a href="#">로그인</a></li>
           <li><a href="#">PC버전</a></li>
-          <li><a href="#">고객센터</a></li>
+        </ul>
+      </div>
+      <div class="footTelArea">
+        <ul>
+          <li>대표 1588-3443</li>
+          <li>해외항공 02-3479-4399</li>
         </ul>
       </div>
       <div class="footInfoArea">
-        <a href="#" class="btnInfo" onclick="footInfoToggle()">
-          <span>(주)인터파크 사업자 정보</span>
-          <span class="btn">고객센터</span>
-        </a>
+        <span>(주)인터파크 사업자 정보</span>
+        <span class="bar"></span>
+        <button type="button" class="btnInfo" onclick="footInfoToggle()">
+          <span>고객센터</span>
+        </button>
+        <!-- 접기 펼치기 기능 추가 -->
         <div class="footInfo" style="display: none;">
           <dl>
             <dt>대표이사</dt>
@@ -44,21 +52,26 @@
           <dl>
             <dt>고객센터</dt>
             <dd>
-              <p class="tel">
                 <span>쇼핑 1588-1555</span>
+                <span class="bar"></span>
                 <span>도서 1577-2555</span>
-              </p>
-              <p class="tel">
+             </dd>
+             <dd>
                 <span>티켓 1544-1555</span>
+                <span class="bar"></span>
                 <span>투어 1588-3443</span>
-              </p>
-              <p>해외항공전용 02-3479-4399</p>
-              <p>국내항공전용 02-3479-4340</p>
+             </dd>
+             <dd>
+               해외항공전용 02-3479-4399
+             </dd>
+             <dd>
+               국내항공전용 02-3479-4340
+             </dd>
             </dd>
           </dl>
           <dl>
             <dt>이메일</dt>
-            <dd>이메일 helpdesk@interpark.com</dd>
+            <dd>이메일 <a href="mailto:helpdesk@interpark.com">helpdesk@interpark.com</a></dd>
           </dl>
         </div>
       </div>
@@ -70,10 +83,9 @@
           <li><a href="#">보험가입내역</a></li>
         </ul>
       </div>
-      <div class="footNotice">
-        <p>(주)인터파크는 통신판매중개자로서 통신판매의 당사자가 아니므로 개별 <br> 판매자가 등록한 오픈마켓 상품에 대해서 (주)인터파크는 일체 책임을 지지 않습니다.</p>
+      <address class="footNotice">
         <p>Copyright © INTERPARK All Rights Reserved </p>
-      </div>
+      </address>
     </div>
   </footer>
   <script>
