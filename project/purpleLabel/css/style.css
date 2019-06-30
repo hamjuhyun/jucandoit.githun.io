@@ -1,0 +1,332 @@
+/* reset */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+em,
+dfn,
+i {
+  font-style: normal;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: none;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.purpleLabelWrap {
+  overflow: hidden;
+  min-width: 1200px;
+  padding-bottom: 100px;
+  font-size: 0;
+  text-align: center;
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/bg_top.jpg") no-repeat center top #2d004c;
+}
+
+.purpleLabelWrap .blind {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+.purpleLabelWrap img {
+  vertical-align: top;
+}
+
+.purpleLabelWrap .purpleVisualWrap {
+  position: relative;
+}
+
+.purpleLabelWrap .purpleNavWrap {
+  position: relative;
+  height: 148px;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav {
+  width: 100%;
+  height: inherit;
+  margin: 0 auto;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul {
+  font-size: 0;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 148px;
+  background-position: center center;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.tabList01 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_1.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.tabList02 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_2.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.tabList03 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_3.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.tabList04 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_4.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.tabList05 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_5.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.active.tabList01 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_1_on.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.active.tabList02 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_2_on.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.active.tabList03 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_3_on.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.active.tabList04 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_4_on.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleNavWrap .nav ul li.active.tabList05 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/tab_5_on.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleAboutWrap .video {
+  width: 695px;
+  height: 408px;
+  margin: auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.purpleLabelWrap .purpleAboutWrap .video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.purpleLabelWrap .purpleTimeWrap .purpleTimeSale {
+  position: relative;
+  width: 1200px;
+  height: 1028px;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: #000;
+}
+
+.purpleLabelWrap .purpleTimeWrap .purpleTimeSale .contents {
+  border-top: 2px solid #7a3edd;
+}
+
+.purpleLabelWrap .purpleTimeWrap .purpleTimeSale .imgTxt {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav ul {
+  font-size: 0;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li {
+  display: inline-block;
+  margin: 0 14px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li a {
+  display: block;
+  width: 99px;
+  height: 99px;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li.navList01 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/nav_show_video.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li.navList02 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/nav_show_1.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li.active.navList02 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/nav_show_1_on.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li.navList03 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/nav_show_2.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li.active.navList03 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/nav_show_2_on.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li.navList04 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/nav_show_3.png") no-repeat;
+}
+
+.purpleLabelWrap .purpleTimeWrap .Lnav li.active.navList04 {
+  background: url("http://ticketimage.interpark.com/TicketImage/uidev/desktop/images/pages/promotion/190527_purpleLabel/nav_show_3_on.png") no-repeat;
+}
