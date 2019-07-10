@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>스코프 이해하기</title>
+</head>
+<body>
+  <h1>
+    스코프의 범위
+  </h1>
+  <ul>
+    <li>Global</li>
+    <li>function</li>
+    <li>block</li>
+  </ul>
+  <script>
+   const value = 'hello!'
+
+   function myFunction() {
+    const value = 'bye!';
+
+    if (true) {
+      const value = 'world';
+      console.log('block scope: ');
+      console.log(value);
+    }
+
+    console.log('function scope');
+    console.log(value);
+   }
+
+   myFunction();
+   console.log('global scope');
+   console.log(value);
+  </script>
+</body>
+</html>

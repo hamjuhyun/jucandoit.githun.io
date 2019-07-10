@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.thumbSliderWrap {
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.thumbSliderWrap .number {
+  overflow: hidden;
+}
+
+.thumbSliderWrap .number .item {
+  float: left;
+  margin-left: 30px;
+}
+
+.thumbSliderWrap .number .item a {
+  display: block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: #303030;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.thumbSliderWrap .number .item.on a {
+  background: blue;
+  color: #fff;
+  text-align: center;
+}
+
+.thumbSliderWrap .controls {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+}
+
+.thumbSliderWrap .controls .prev {
+  margin-left:  0px;
+}
+
+.thumbSliderWrap .controls .next {
+  margin-left: 358px;
+}
+
+.mainSliderWrap {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 700px;
+}
+
+.mainSliderWrap ul {
+  overflow: hidden;
+  height: 500px;
+}
+
+.mainSliderWrap li {
+  float: left;
+  width: 700px;
+  height: 500px;
+  font-size: 50px;
+  color: #fff;
+}
+
+.mainSliderWrap li:nth-child(1) {
+  background: red;
+}
+
+.mainSliderWrap li:nth-child(2) {
+  background: orange;
+}
+
+.mainSliderWrap li:nth-child(3) {
+  background: yellow;
+}
+
+.mainSliderWrap li:nth-child(4) {
+  background: green;
+}
+
+.mainSliderWrap li:nth-child(5) {
+  background: blue;
+}
+
+.mainSliderWrap li:nth-child(6) {
+  background: skyblue;
+}
+
+.mainSliderWrap li:nth-child(7) {
+  background: purple;
+}
+

@@ -4,7 +4,9 @@
   "description": "my portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,18 @@
   "homepage": "https://github.com/hamjuhyun/jucandoit91#readme",
   "keywords": [],
   "dependencies": {
-    "ejs": "^2.6.1",
+    "ejs": "^2.6.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "gulp-sass": "^4.0.2"
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "gulp-sass": "^4.0.2",
+    "vue-cli": "^2.9.6",
+    "vue-loader": "^15.7.0",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   }
 }
