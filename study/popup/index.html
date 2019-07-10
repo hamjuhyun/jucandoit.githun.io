@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>팝업</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<style>
+  .dimmest {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 50;
+    overflow: hidden;
+    background: #333;
+  }
+
+  .dimmest .dim_layer {
+    position: absolute;
+    width: 500px;
+    background: #eee;
+  }
+
+  .dimmest .dim_layer .tit {
+    height: 200px;
+    background: #e74c3c;
+  }
+
+  .dimmest .dim_layer .content {
+    height: 300px;
+    color: #fff;
+  }
+
+  .dimmest .dim_layer .content {
+    height: 100px;
+    background: #2c3e50;
+  }
+</style>
+
+<body>
+  <div class="dimmest">
+    <div class="dim_layer">
+      <div class="tit">팝업</div>
+      <div class="content">팝업 내용 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sint esse incidunt
+        quos optio assumenda aliquid laborum eaque. Nostrum at omnis rem in explicabo ab voluptatem suscipit debitis
+        nemo qui.</div>
+      <div class="foot">팝업 푸터</div>
+    </div>
+  </div>
+</body>
+<script>
+  function dimedLayerFunc() {
+    var elem = $('.dimmest .dim_layer');
+    var dimH = elem.outerHeight();
+    var dimW = elem.outerWidth();
+    var h = $(window).height();
+    var w = $(window).width();
+    if (dimH > h) {
+      elem.css({
+        'marginTop': 0 + 'px',
+        'top': 0
+      })
+    } else {
+      elem.css({
+        'marginTop': -(dimH / 2) + 'px',
+        'top': '50%'
+      });
+    }
+    if (dimW > w) {
+      elem.css({
+        'marginLeft': 0,
+        'left': 0
+      })
+    } else {
+      elem.css({
+        'marginLeft': -(dimW / 2) + 'px',
+        'left': '50%'
+      })
+    }
+  }
+  dimedLayerFunc();
+</script>
+
+</html>
