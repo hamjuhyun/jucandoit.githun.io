@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트 기초</title>
+</head>
+<style>
+  .error {
+    color: #e74c3c;
+  }
+
+  .info {
+    color: #16a085;
+  }
+</style>
+
+<body>
+  <p class="error"> Uncaugth SyntaxError: Unexpected token var </p>
+  <div> var a = 3; var var = a + 2; </div>
+  <div> function plusOne() { var foo = 1; var bar = foo + 1; return bar; } plusOne(); </div>
+  <p class="info">const 변수이용, 아규먼트, 파라미터</p>
+  <div>function plusOne(base) { const bar = base + 1; return bar; } var foo = 1; plusOne(foo);</div>
+  <p class="error">VM486:3 Uncaught TypeError: Assignment to constant variable. <span>다른 값 할당을 금지시킴 (const를 써서 나는
+      오류이다.)</span></p>
+  <div>function plusOne(base) { const bar = base + 1; bar = bar + 0; return bar; } var foo = 1; plusOne(foo);</div>
+  <div>function plusOne(base) { console.log(typeof base); const bar = base + 1; return bar; } var foo = '1';
+    plusOne(foo);</div>
+  <div>function plusOne(base) { base = (typeof base === 'number') ? base : +base; const bar = base + 1; return bar; }
+    var foo = '1'; plusOne(foo);</div>
+  <script>
+  </script>
+</body>
+
+</html>
