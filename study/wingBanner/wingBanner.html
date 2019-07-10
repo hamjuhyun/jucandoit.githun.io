@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>윙배너</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  header,
+  footer {
+    height: 100px;
+    background: #333;
+    color: #fff;
+  }
+
+  main {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  main section {
+    height: 700px;
+    background: skyblue;
+  }
+
+  .wingBanner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 610px;
+    padding-top: 10px;
+    z-index: 100;
+  }
+
+  .wingBanner .wing {
+    width: 100px;
+    height: 200px;
+    margin-top: 10px;
+    background: pink;
+  }
+
+  .wingBanner.wingFixed {
+    position: fixed;
+    top: 0;
+  }
+</style>
+
+<body>
+  <header>헤더</header>
+  <main>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <div class="wingBanner">
+      <div class="wing"></div>
+      <div class="wing"></div>
+      <div class="wing"></div>
+    </div>
+  </main>
+  <footer>푸터</footer>
+</body>
+<script>
+  function fixedWingBanner() {
+    var bn = $('.wingBanner');
+    var bnTopPosition = $('.wingBanner').offset().top; //100
+    $(window).scroll(function () {
+      var sct = document.documentElement.scrollTop;
+      console.log(sct);
+      if (sct > bnTopPosition) {
+        bn.addClass('wingFixed');
+      } else {
+        bn.removeClass('wingFixed');
+      }
+    });
+  }
+  fixedWingBanner();
+</script>
+
+</html>
