@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dom</title>
+</head>
+
+<body>
+  <div id="root"> 하하 </div>
+  <div id="wrapper">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+  </div>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <p title="테스트2">히히</p>
+  <p>하하</p>
+  <p title="테스트1">호호</p>
+  <p>흐흐</p>
+  <a href="" id="a"></a>
+  <script>
+    // console.log(document.getElementById('wrapper').getElementsByTagName('li'));
+    // var p = document.getElementsByTagName('p');
+    // for (var i = 0; i < p.length; i++) {
+    //   if (p[i].getAttribute('title') === null) { return } else {
+    //     console.log(p[i].getAttribute('title'));
+    //   }
+    // }
+    // for (var i = 0; i < p.length; i++) {
+    //   if (p[i].getAttribute('title')) {
+    //     console.log(p[i].getAttribute('title'));
+    //   }
+    // }
+    // console.log(document.getElementsByTagName('a'));
+    // var a = document.getElementById('a');
+    var a = document.getElementsByTagName('a')[0];
+    console.log(a.setAttribute('href', 'www.naver.com'), a.setAttribute('target', 'blank'));
+    const apply = function add(1) {
+      return a + 2;
+    }
+  </script>
+</body>
+
+</html>
