@@ -1,10 +1,51 @@
-<!DOCTYPE html>
+<html>
 
-<head lang="ko">
+<head>
   <title>Main</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
 </head>
 
-<body> Hey, this is index page </body>
+<body>
+  <div id="list">
+  </div>
+  <table id="detail">
+  </table>
+  <script id="product-template" type="text/x-handlebars-template"> <ul>
+        {{#each product}}
+          <li><a href="#" data-id={{id}} class="item">{{name}}</a></li>
+        {{/each}}
+      </ul>
+    </script>
+  <script id="detail-template" type="text/x-handlebars-template"> <tr>
+      {{#each product}}
+        {{#if this }}
+        <td id="price">{{price}}</td>
+        <td id="name">{{name}}</td>
+         {{/if}}
+      {{/each}}
+    </tr>
+    </script>
+  <script>
+    $.ajax({
+      url: "/api/getProduct", // 클라이언트가 HTTP 요청을 보낼 서버의 URL 주소
+      data: {}, // HTTP 요청과 함께 서버로 보낼 데이터  page: "1"
+      method: "GET", // HTTP 요청 메소드(GET, POST 등)
+      dataType: "json" // 서버에서 보내줄 데이터의 타입
+    }).done(function (json) {
+      var source = $("#product-template").html();
+      var template = Handlebars.compile(source);
+      var html = template(json);
+      $('#list').append(html);
+      $("#list").on('click', '.item', function (e) {
+        e.preventDefault();
+        var source = $("#detail-template").html();
+        var template = Handlebars.compile(source);
+        var html = template(json);
+        $('#detail').append(html);
+      })
+    });
+  </script>
+</body>
 
 </html>

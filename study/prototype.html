@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>프로토타입</title>
+</head>
+
+<body>
+  <script>
+    function A() {
+      this.name = 'ju'
+    }
+    A.prototype.getName = function () {
+      return this.name
+    }
+    A.prototype.setName = function (val) {
+      this[name] = val;
+    }
+    var a = new A();
+  </script>
+</body>
+
+</html>

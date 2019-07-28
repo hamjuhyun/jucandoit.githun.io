@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <script>
     var c = {
-    item : {
-      name: 'juhyun',
-      age: 20
-    },
-    getter : function(prop) {
-      console.log(this.item[prop])
-      return this.item[prop]
-    },
-    setter : function(prop, val) {
-      this.item[prop] = val;
+      item: {
+        name: 'juhyun',
+        age: 20
+      },
+      getter: function (prop) {
+        console.log(this.item[prop])
+        return this.item[prop]
+      },
+      setter: function (prop, val) {
+        this.item[prop] = val;
+      }
     }
-  }
-
-  console.log(c.getter('name'));
-
+    console.log(c.getter('name'));
   </script>
 </body>
+
 </html>
-
-
-zz0e.cafe24.com/woodam/page.html
