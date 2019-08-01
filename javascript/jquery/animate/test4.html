@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+  <title>제이쿼리</title>
+</head>
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background: blue;
+  }
+</style>
+
+<body>
+  <p>animate() 메서드를 사용하여 div 요소의 높이를 500px로 변경하세요 </p>
+  <div class="box"></div>
+  <script>
+    $(function () {
+      $('.box').animate({
+        'height': '500px'
+      }, function () {
+        $(this).animate({
+          'height': '100px'
+        }, 500);
+      });
+    });
+  </script>
+</body>
+
+</html>

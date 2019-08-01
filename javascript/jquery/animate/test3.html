@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+  <title>제이쿼리</title>
+</head>
+<style>
+  .box {
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: blue;
+  }
+</style>
+
+<body>
+  <p>animate() 메서드를 사용하여 div 오른쪽으로 250px 이동하세요. </p>
+  <button>움직이기</button>
+  <div class="box"></div>
+  <script>
+    $(function () {
+      $('button').on('click', function () {
+        $('.box').animate({
+          'left': '250px'
+        }, 5000, function () {
+          $(this).animate({
+            'left': '0'
+          }, 3000)
+        })
+      })
+    });
+  </script>
+</body>
+
+</html>
