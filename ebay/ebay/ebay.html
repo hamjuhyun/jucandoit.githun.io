@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <title>Qoo10</title>
+</head>
+
+<body>
+  <div class="q_skip">
+    <h2 class="blind">ナビゲーションをスキップ</h2>
+    <ul>
+      <li><a href="#skip_gnb">メニューのショートカット</a></li>
+      <li><a href="#content">本文ショートカット</a></li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <!-- 헤더 -->
+    <div class="header">
+      <div class="header_area">
+        <h1><a href="#"><img src="images/logo_qoo10_main.png" alt="Qoo10 an eBay company"></a></h1>
+        <div class="util_area">
+          <ul class="util_area_list">
+            <li><a href="#" title="ログイン">ログイン</a></li>
+            <li><a href="#" title="My Qoo10">My Qoo10</a></li>
+            <li class="basket"><a href="#" title="カート"><i class="ico"></i>カート</a></li>
+            <li class="qpost"><a href="#" title="Qpost"><i class="ico"></i> Qpost</a></li>
+            <li><a href="#" title="ヘルプ">ヘルプ</a></li>
+            <li class="lang_cont">
+              <div class="lang_slct">
+                <select>
+                  <option value="lang">Language</option>
+                  <option value="en">English</option>
+                  <option value="ja">日本語</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="search_area">
+          <!-- 자동완성입력창 -->
+          <form action="">
+            <fieldset>
+              <legend class="blind">検索</legend>
+              <span class="search">
+                <input type="text" title="検索キーワードを入力" autocomplete="auto">
+              </span>
+              <button type="button" class="search_btn"><span>検索</span></button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="bn_area">
+          <a href="#"><img src="images/top_bn.gif" alt="バナー画像"></a>
+        </div>
+      </div>
+      <!-- gnb  메뉴 -->
+      <div id="skip_gnb" class="common_nav">
+        <h2 class="blind">メインメニュー</h2>
+        <div class="common_nav_area">
+          <ul class="common_nav_menu" role="menubar">
+            <li class="nav_menu">
+              <a class="ebaymn_top_link" href="#" role="menuitem" aria-expanded="false">レディースファッション</a>
+              <div class="nav_sub_area" aria-hidden="true">
+                <div class="nav_inner">
+                  <div class="nav_colgroup cateBox"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav_menu">
+              <a class="ebaymn_top_link" href="#" role="menuitem" aria-expanded="false">ビューティ・コスメ</a>
+              <div class="nav_sub_area" aria-hidden="true">
+                <div class="nav_inner">
+                  <div class="nav_colgroup cateBox"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav_menu">
+              <a class="ebaymn_top_link" href="#" role="menuitem" aria-expanded="false">メンズ・スポーツ</a>
+              <div class="nav_sub_area" aria-hidden="true">
+                <div class="nav_inner">
+                  <div class="nav_colgroup cateBox"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav_menu">
+              <a class="ebaymn_top_link" href="#" role="menuitem" aria-expanded="false">デジタル・Mobile</a>
+              <div class="nav_sub_area" aria-hidden="true">
+                <div class="nav_inner">
+                  <div class="nav_colgroup cateBox"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav_menu">
+              <a class="ebaymn_top_link" href="#" role="menuitem" aria-expanded="false">ホーム・生活</a>
+              <div class="nav_sub_area" aria-hidden="true">
+                <div class="nav_inner">
+                  <div class="nav_colgroup cateBox"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav_menu">
+              <a class="ebaymn_top_link" href="#" role="menuitem" aria-expanded="false">食品・ベビー</a>
+              <div class="nav_sub_area" aria-hidden="true">
+                <div class="nav_inner">
+                  <div class="nav_colgroup cateBox"></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav_menu">
+              <a class="ebaymn_top_link" href="#" role="menuitem" aria-expanded="false">エンタメ・eチケット</a>
+              <div class="nav_sub_area" aria-hidden="true">
+                <div class="nav_inner">
+                  <div class="nav_colgroup cateBox"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="all_total_layer">
+            <button type="button" class="btn_nav_all" aria-haspopup="true" aria-expanded="false">
+              <span class="icon_menu">
+                <i><span class="blind">メインメニュー見る</span></i>
+              </span>
+            </button>
+            <div class="all_total_menu" aria-hidden="true">
+              <div class="all_menu_wrap">
+                <ul class="all_menu"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //gnb  메뉴 -->
+    </div>
+    <!-- 컨테이너 -->
+    <div class="container">
+      <div id="content" class="content">
+        <div class="column_section">
+          <div class="top_bn_section">
+            <a href="#"><img src="images/data/topBanner.jpg" alt="{暖かい春がきました。}"></a>
+          </div>
+        </div>
+        <div class="column_section">
+          <div class="section_slide">
+            <h2 class="blind">QOO10 メインスライド</h2>
+            <div class="slide_area">
+              <ul class="slide_list">
+                <li><a href="#"><img src="images/data/topSlide01.webp" alt="{バナー画像}"></a></li>
+                <li><a href="#"><img src="images/data/topSlide02.webp" alt="{バナー画像}"></a></li>
+                <li><a href="#"><img src="images/data/topSlide03.webp" alt="{バナー画像}"></a></li>
+                <li><a href="#"><img src="images/data/topSlide04.webp" alt="{バナー画像}"></a></li>
+                <li><a href="#"><img src="images/data/topSlide05.gif" alt="{バナー画像}"></a></li>
+                <li><a href="#"><img src="images/data/topSlide06.webp" alt="{バナー画像}"></a></li>
+                <li><a href="#"><img src="images/data/topSlide07.webp" alt="{バナー画像}"></a></li>
+                <li><a href="#"><img src="images/data/topSlide08.webp" alt="{バナー画像}"></a></li>
+              </ul>
+              <div class="slide_page">
+                <span class="blind"> 現在のスライド番号</span>
+                <em class="slide_index">1</em>
+                <span class="slide_separator" aria-hidden="true">/</span>
+                <span class="blind">スライド全体数</span>
+                <em class="slide_total">8</em>
+              </div>
+              <div class="slide_ctrl">
+                <button type="button" class="slide_btn slide_prev">
+                  <span class="blind">前のスライドを表示</span>
+                </button>
+                <button type="button" class="slide_btn slide_next">
+                  <span class="blind">次のスライドを表示</span>
+                </button>
+                <button type="button" class="slide_auto on_play">
+                  <span class="blind">
+                    <span class="tx_off">スライド自動再生する</span>
+                    <span class="tx_on"> スライドの自動再生停止</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="section_sale">
+            <div class="section_tit_area">
+              <h2 class="section_tit">
+                <i class="ico ico_time"></i>
+                <span>プレミアムモール</span>
+              </h2>
+              <em class="now">実施中</em>
+            </div>
+            <div class="section_cont">
+              <div class="item_slide">
+                <input type="radio" name="pos" id="pos1" checked>
+                <input type="radio" name="pos" id="pos2">
+                <input type="radio" name="pos" id="pos3">
+                <input type="radio" name="pos" id="pos4">
+                <ul>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium01.webp" alt="{}">
+                      </a>
+                    </div>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium01.webp" alt="{}">
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium02.webp" alt="{}">
+                      </a>
+                    </div>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium02.webp" alt="{}">
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium01.webp" alt="{}">
+                      </a>
+                    </div>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium01.webp" alt="{}">
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium02.webp" alt="{}">
+                      </a>
+                    </div>
+                    <div class="item_prod">
+                      <a href="#">
+                        <img src="images/data/premium02.webp" alt="{}">
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <div class="page_navigation">
+                  <label for="pos1"><span class="blind">1</span></label>
+                  <label for="pos2"><span class="blind">2</span></label>
+                  <label for="pos3"><span class="blind">3</span></label>
+                  <label for="pos4"><span class="blind">4</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column_section">
+          <div class="section_rank">
+            <div class="section_tit_area">
+              <h2 class="section_tit">
+                <i class="ico ico_rank"></i>
+                <span>ランキング</span>
+              </h2>
+              <ul class="rank_tab_lst">
+                <li class="on"><a href="#">総合</a></li>
+                <li><a href="#">ファッション</a></li>
+                <li><a href="#">ビューティ</a></li>
+                <li><a href="#">メンズ・スポーツ</a></li>
+                <li><a href="#">デジタル</a></li>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">食品・ベビー</a></li>
+                <li><a href="#">エンタメ</a></li>
+              </ul>
+            </div>
+            <div class="section_cont">
+              <ul class="item_lst">
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">1</span>
+                    <div class="rank_price">15,000,000円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#"
+                      title="Wｸｰﾎﾟﾝ後11200円(2000円+SHOP1800円ｸｰﾎﾟﾝ) ワンデーアキュビュー  ディファインモイスト×8箱セット【右眼4箱・左眼4箱／片眼120枚／計240枚／120日分】【処方箋不要】【2回に分けてお届け】／1日">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking01.webp"
+                        alt="Wｸｰﾎﾟﾝ後11200円(2000円+SHOP1800円ｸｰﾎﾟﾝ) ワンデーアキュビュー  ディファインモイスト×8箱セット【右眼4箱・左眼4箱／片眼120枚／計240枚／120日分】【処方箋不要】【2回に分けてお届け】／1日">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">2</span>
+                    <div class="rank_price">15,000円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking02.webp"
+                        alt="✨すぐ完売になる大人気アイテム！✨【2+1】 【2本セット購入毎に1本プレゼント】毛穴の奥までスッキリ、高機能ホットクレンジングジェル ♪skinvill"
+                        title="✨すぐ完売になる大人気アイテム！✨【2+1】 【2本セット購入毎に1本プレゼント】毛穴の奥までスッキリ、高機能ホットクレンジングジェル ♪skinvill">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">3</span>
+                    <div class="rank_price">15,000円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#"
+                      title="🍇高品質ネイルシール追加🍇999円送料無料🍇リアル新作追加まるで本物のネイル　200以上種類選べる特選　★貼るだけでジェルネイルが完成！リアルジェルネイル　ステッカー　 ジェルネイル　">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking03.webp"
+                        alt="🍇高品質ネイルシール追加🍇999円送料無料🍇リアル新作追加まるで本物のネイル　200以上種類選べる特選　★貼るだけでジェルネイルが完成！リアルジェルネイル　ステッカー　 ジェルネイル">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">4</span>
+                    <div class="rank_price">2,880円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking04.webp"
+                        alt="Wｸｰﾎﾟﾝ後9900円! (2000円+SHOP3100円ｸｰﾎﾟﾝ) 【送料無料】ワンデーアキュビューモイスト×8箱セット／処方箋不要【右眼4箱・左眼4箱／片眼120枚／計240枚／120日分】"
+                        title="Wｸｰﾎﾟﾝ後9900円! (2000円+SHOP3100円ｸｰﾎﾟﾝ) 【送料無料】ワンデーアキュビューモイスト×8箱セット／処方箋不要【右眼4箱・左眼4箱／片眼120枚／計240枚／120日分】">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">5</span>
+                    <div class="rank_price">2,880円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#" title="＼￥5700←ｸｰﾎﾟﾝ適用後☆30日(月)まで*+／デイリーズアクア バリューパック 90枚入×2箱 【送料無料】">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking05.webp"
+                        alt="＼￥5700←ｸｰﾎﾟﾝ適用後☆30日(月)まで*+／デイリーズアクア バリューパック 90枚入×2箱 【送料無料】">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">6</span>
+                    <div class="rank_price">2,880円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#"
+                      title="Wｸｰﾎﾟﾝ適用後5000円! (800円+SHOP200円ｸｰﾎﾟﾝ) [送料無料]アキュビュー オアシス×4箱セット[右眼2箱・左眼2箱／片眼12枚／計24枚／180日分]処方箋不要／2週間使い捨">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking06.webp"
+                        alt="Wｸｰﾎﾟﾝ適用後5000円! (800円+SHOP200円ｸｰﾎﾟﾝ) [送料無料]アキュビュー オアシス×4箱セット[右眼2箱・左眼2箱／片眼12枚／計24枚／180日分]処方箋不要／2週間使い捨">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">7</span>
+                    <div class="rank_price">2,880円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#"
+                      title="≪クーポン利用でさらにお得！≫1位獲得！【3個セット】 ink. クレンジングバーム 90g(約50日分）W洗顔不要 無添加 とろけるクレンジング（無香料・ローズ・シトラス・ラベンダー">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking07.webp"
+                        alt="≪クーポン利用でさらにお得！≫1位獲得！【3個セット】 ink. クレンジングバーム 90g(約50日分）W洗顔不要 無添加 とろけるクレンジング（無香料・ローズ・シトラス・ラベンダー)">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">8</span>
+                    <div class="rank_price">2,880円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#"
+                      title="Wｸｰﾎﾟﾝ後10400円! (2000円+SHOP2600円ｸｰﾎﾟﾝ) ワンデーアキュビュートゥルーアイ／処方箋不要【右眼4箱・左眼4箱／片眼120枚／計240枚／120日分】">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking08.webp"
+                        alt="Wｸｰﾎﾟﾝ後10400円! (2000円+SHOP2600円ｸｰﾎﾟﾝ) ワンデーアキュビュートゥルーアイ／処方箋不要【右眼4箱・左眼4箱／片眼120枚／計240枚／120日分】">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">9</span>
+                    <div class="rank_price">2,880円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#"
+                      title="🍒ショップクーポンをお使いください!🍒[MOREMO]🍒WATER TREATMENT : MIRACLE 10 200ml/ウォーター・トリートメント/ヘア・オイル/髪の復旧・トリートメント/頭皮栄養供給シャンプー/モレモウォータートリートメント/待つ必要ないトリートメント/洗ってリンスば済む">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking09.webp"
+                        alt="🍒ショップクーポンをお使いください!🍒[MOREMO]🍒WATER TREATMENT : MIRACLE 10 200ml/ウォーター・トリートメント/ヘア・オイル/髪の復旧・トリートメント/頭皮栄養供給シャンプー/モレモウォータートリートメント/待つ必要ないトリートメント/洗ってリンスば済む">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_rank">
+                    <span class="rank_num">10</span>
+                    <div class="rank_price">2,880円</div>
+                  </div>
+                  <div class="item_prod">
+                    <a href="#" title="＼￥5900←ｸｰﾎﾟﾝ適用後☆30日(月)まで*+／ メダリスト ワンデープラス マキシボックス 90枚入×2箱 【送料無料】">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/ranking10.webp"
+                        alt="＼￥5900←ｸｰﾎﾟﾝ適用後☆30日(月)まで*+／ メダリスト ワンデープラス マキシボックス 90枚入×2箱 【送料無料】">
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section_prime">
+            <div class="section_tit_area">
+              <h2 class="section_tit">
+                <i class="ico ico_prime"></i>
+                <span>Q · Prime Shop</span>
+              </h2>
+            </div>
+            <div class="section_cont">
+              <ul class="item_lst ty_lst">
+                <li>
+                  <a href="#">
+                    <div class="item_prod">
+                      <div class="thmb">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod03.jpg" alt="{【 1+1+1 】【 値段で勝負！ 】【 ザ・セム 】【 THE SAEM 】【 日本国内発送 】【 翌日お届け目指し 】【無料発送目指し】【
+                          最安値発送 】【 コンシーラー２種 】}">
+                      </div>
+                    </div>
+                    <div class="item_info">
+                      <div class="item_tit">【 1+1+1 】【 値段で勝負！ 】【 ザ・セム 】【 THE SAEM 】【 日本国内発送 】【 翌日お届け目指し 】【無料発送目指し】【
+                        最安値発送 】【 コンシーラー２種 】</div>
+                      <div class="item_delivery">
+                        <span class="rate_off">
+                          <span class="rate_on" style="width:80%"><span class="blind">評価 全10点のうち8点</span></span>
+                        </span>
+                        <div class="ship free">
+                          <span class="blind"> 配信手段 : 国内配信 無料 </span>
+                        </div>
+                      </div>
+                      <div class="item_price">7,699円</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="item_prod">
+                      <div class="thmb">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod02.jpg" alt="
+                        ★今だけの激烈超特価なんと44％OFF8999円‼★じゅうたん対応ノズル付！【送料無料☆最安値に超戦中！】マキタコードレスクリーナー　CL105DWN　3色☆使い勝手抜群のハイパワーハンディクリーナー★パワフルモード搭載　※タイトル表示が現在価格と異なる場合がございます
+                      ">
+                      </div>
+                    </div>
+                    <div class="item_info">
+                      <div class="item_tit">
+                        ★今だけの激烈超特価なんと44％OFF8999円‼★じゅうたん対応ノズル付！【送料無料☆最安値に超戦中！】マキタコードレスクリーナー　CL105DWN　3色☆使い勝手抜群のハイパワーハンディクリーナー★パワフルモード搭載　※タイトル表示が現在価格と異なる場合がございます
+                      </div>
+                      <div class="item_delivery">
+                        <span class="rate_off">
+                          <span class="rate_on" style="width:80%"><span class="blind">評価 全10点のうち8点</span></span>
+                        </span>
+                        <div class="ship free">
+                          <span class="blind">配信手段 : 国内配信 無料</span>
+                        </div>
+                      </div>
+                      <div class="item_price">8,899円</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="item_prod">
+                      <div class="thmb">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod03.jpg" alt="{【 1+1+1 】【 値段で勝負！ 】【 ザ・セム 】【 THE SAEM 】【 日本国内発送 】【 翌日お届け目指し 】【無料発送目指し】【
+                            最安値発送 】【 コンシーラー２種 】}">
+                      </div>
+                    </div>
+                    <div class="item_info">
+                      <div class="item_tit">【 1+1+1 】【 値段で勝負！ 】【 ザ・セム 】【 THE SAEM 】【 日本国内発送 】【 翌日お届け目指し 】【無料発送目指し】【
+                        最安値発送 】【 コンシーラー２種 】</div>
+                      <div class="item_delivery">
+                        <span class="rate_off">
+                          <span class="rate_on" style="width:80%"><span class="blind">評価 全10点のうち8点</span></span>
+                        </span>
+                        <div class="ship free">
+                          <span class="blind"> 配信手段 : 国内配信 無料 </span>
+                        </div>
+                      </div>
+                      <div class="item_price">7,699円</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="column_section">
+          <div class="section_purchase">
+            <div class="section_tit_area">
+              <h2 class="section_tit">
+                <i class="ico ico_purchase
+                "></i>
+                <span>共同購入</span>
+              </h2>
+            </div>
+            <div class="section_cont">
+              <ul class="item_lst">
+                <li>
+                  <div class="item_prod">
+                    <a href="#">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today.webp"
+                        alt="国内即日発送可能 Fellow登録で5Qポイント 600以上種類 SNS話題 ネイルシール ネイルシール韓国ファッション ‎‎ジェルネイルシール ネイル ネイルステッカー ネイルシール 貼るだけ">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_count">89 販売</span>
+                    <span class="item_price">77円</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_prod">
+                    <a href="#">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today.webp"
+                        alt="国内即日発送可能 Fellow登録で5Qポイント 600以上種類 SNS話題 ネイルシール ネイルシール韓国ファッション ‎‎ジェルネイルシール ネイル ネイルステッカー ネイルシール 貼るだけ">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_count">89 販売</span>
+                    <span class="item_price">77円</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_prod">
+                    <a href="#">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today.webp"
+                        alt="国内即日発送可能 Fellow登録で5Qポイント 600以上種類 SNS話題 ネイルシール ネイルシール韓国ファッション ‎‎ジェルネイルシール ネイル ネイルステッカー ネイルシール 貼るだけ">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_count">89 販売</span>
+                    <span class="item_price">77円</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_prod">
+                    <a href="#">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today.webp"
+                        alt="国内即日発送可能 Fellow登録で5Qポイント 600以上種類 SNS話題 ネイルシール ネイルシール韓国ファッション ‎‎ジェルネイルシール ネイル ネイルステッカー ネイルシール 貼るだけ">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_count">89 販売</span>
+                    <span class="item_price">77円</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section_today">
+            <div class="section_tit_area">
+              <h2 class="section_tit">
+                <i class="ico ico_today"></i>
+                <span>今日の特価</span>
+              </h2>
+            </div>
+            <div class="section_cont">
+              <ul class="item_lst">
+                <li>
+                  <div class="item_prod">
+                    <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today02.webp"
+                        alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_price">888円</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_prod">
+                    <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today02.webp"
+                        alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_price">888円</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_prod">
+                    <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today02.webp"
+                        alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_price">888円</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item_prod">
+                    <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/today02.webp"
+                        alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                    </a>
+                  </div>
+                  <div class="item_info">
+                    <span class="item_price">888円</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section_notice">
+            <div class="section_tit_area">
+              <h2 class="section_tit">
+                <i class="ico ico_notice"></i>
+                <span>お知らせ</span>
+              </h2>
+            </div>
+            <div class="section_cont">
+              <ul class="notice_list">
+                <li><a href="#">[Qoo10]　2019年10月1日の税制改正関連及び一部決済サービス中止について</a></li>
+                <li><a href="#">【NEWS LETTER】肌寒い秋に向けて、さらっと羽織ってトレンド感もアップ！Qoo10で人気の「カーディガン」はコレ！（9/6） </a></li>
+                <li><a href="#">【NEWS LETTER】お気に入りの「スニーカー」を見つけて秋のファッション、運動を楽しもう！（8/30） </a></li>
+                <li><a href="#">【NEWS LETTER】夏の肌疲れを秋に持ち越さない！Qoo10で人気の「美容液」で徹底ケア！（8/23）</a></li>
+                <li><a href="#">【NEWS LETTER】暑くて寝苦しい夏の夜に！快適な睡眠をサポートする人気グッズ！Qoo10で人気の「ひんやり寝具」！（8/16）</a></li>
+                <li><a href="#">【NEWS LETTER】令和最初の夏休み！Qoo10で人気の「トラベル」グッズで収納上手！（8/5）</a></li>
+                <li><a href="#">【NEWS LETTER】いよいよ夏本番！Qoo10で今人気の「水着」をチェック！（7/26） </a></li>
+                <li><a href="#">[Qoo10]　2019年10月1日の税制改正関連及び一部決済サービス中止について </a></li>
+                <li><a href="#">【NEWS LETTER】肌寒い秋に向けて、さらっと羽織ってトレンド感もアップ！Qoo10で人気の「カーディガン」はコレ！（9/6）</a></li>
+                <li><a href="#">[Qoo10]　2019年10月1日の税制改正関連及び一部決済サービス中止について</a></li>
+                <li><a href="#">【NEWS LETTER】令和最初の夏休み！Qoo10で人気の「トラベル」グッズで収納上手！ </a></li>
+                <li><a href="#">【NEWS LETTER】暑くて寝苦しい夏の夜に！快適な睡眠をサポートする人気グッズ！Qoo10で人気の「ひんやり寝具」！（8/16） </a></li>
+                <li><a href="#">【NEWS LETTER】令和最初の夏休み！Qoo10で人気の「トラベル」グッズで収納上手！</a></li>
+                <li><a href="#">【NEWS LETTER】暑くて寝苦しい夏の夜に！快適な睡眠をサポートする人気グッズ！Qoo10で人気の「ひんやり寝具」！（8/16） </a></li>
+                <li><a href="#">【NEWS LETTER】令和最初の夏休み！Qoo10で人気の「トラベル」グッズで収納上手！ </a></li>
+                <li><a href="#">【NEWS LETTER】肌寒い秋に向けて、さらっと羽織ってトレンド感もアップ！Qoo10で人気の「カーディガン」はコレ！（9/6） </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="column_section">
+          <div class="section_grid">
+            <div class="section_tit_area">
+              <h2 class="section_tit">
+                <span>美容・コスメ・香水</span>
+              </h2>
+            </div>
+            <div class="section_cont">
+              <div class="col_grid">
+                <ul class="item_col3_lst">
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="#韓国ファッション">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod01.jpg"
+                          alt="韓国ファッション">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_tit">韓国ファッション see item ぱーかー </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="#韓国ファッション">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod01.jpg"
+                          alt="韓国ファッション">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_tit">韓国ファッション see item ぱーかー </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="#韓国ファッション">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod01.jpg"
+                          alt="韓国ファッション">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_tit">韓国ファッション see item ぱーかー </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="#韓国ファッション">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod01.jpg"
+                          alt="韓国ファッション">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_tit">韓国ファッション see item ぱーかー </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="#韓国ファッション">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod01.jpg"
+                          alt="韓国ファッション">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_tit">韓国ファッション see item ぱーかー </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="#韓国ファッション">
+                        <img class="lazy" src="images/img_no_item_image.png" data-src="images/data/prod01.jpg"
+                          alt="韓国ファッション">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_tit">韓国ファッション see item ぱーかー </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col_grid circle_lst">
+                <ul class="item_lst">
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                        <img class="lazy" src="images/data/today02.webp" data-src="images/data/today02.webp"
+                          alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_price">888円</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                        <img class="lazy" src="images/data/today02.webp" data-src="images/data/today02.webp"
+                          alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_price">888円</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                        <img class="lazy" src="images/data/today02.webp" data-src="images/data/today02.webp"
+                          alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_price">888円</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item_prod">
+                      <a href="#" title="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                        <img class="lazy" src="images/data/today02.webp" data-src="images/data/today02.webp"
+                          alt="iPhone6/6s/7/8/Plus/X （通常＆全面＆ブルライトカット＆5D防塵）強化ガラス 全面 保護フィルム自動密着 超鮮明 極薄9H">
+                      </a>
+                    </div>
+                    <div class="item_info">
+                      <span class="item_price">888円</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="col_grid">
+                <div class="item_big_lst">
+                  <li>
+                    <a href="#" title="FashionDay"><img class="lazy" src="images/img_no_item_image.png"
+                        data-src="images/data/prod05.webp" alt="FashionDay"></a>
+                    <div class="info">
+                      <div class="tit">会社員Aちゃん愛用💛アイテム</div>
+                      <dl class="total">
+                        <dt>今日</dt>
+                        <dd>570</dd>
+                        <dt>合計</dt>
+                        <dd>25,858</dd>
+                      </dl>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" title="FashionDay"><img class="lazy" src="images/img_no_item_image.png"
+                        data-src="images/data/prod05.webp" alt="FashionDay"></a>
+                    <div class="info">
+                      <div class="tit">会社員Aちゃん愛用💛アイテム</div>
+                      <dl class="total">
+                        <dt>今日</dt>
+                        <dd>570</dd>
+                        <dt>合計</dt>
+                        <dd>25,858</dd>
+                      </dl>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column_section">
+          <div class="section_grpsvc">
+            <dl>
+              <dt>Qoo10お得情報</dt>
+              <dd><a href="#">購入ガイド</a></dd>
+              <dd><a href="#">会員登録</a></dd>
+              <dd><a href="#">ランキング</a></dd>
+              <dd><a href="#">特集ページ</a></dd>
+              <dd><a href="#">タイムセール</a></dd>
+              <dd><a href="#">今日の特価</a></dd>
+              <dd><a href="#">共同購入</a></dd>
+            </dl>
+            <dl>
+              <dt>Qoo10で販売する</dt>
+              <dd><a href="#">出店者登録</a></dd>
+              <dd><a href="#">提携</a></dd>
+              <dd><a href="#">販売ガイド</a></dd>
+              <dt>カスタマーラウンジ</dt>
+              <dd><a href="#">Qラウンジ</a></dd>
+            </dl>
+            <dl>
+              <dt>カスタマーサービス</dt>
+              <dd><a href="#">Myお問い合わせ</a></dd>
+              <dd><a href="#">FAQ(よくある質問)</a></dd>
+              <dd><a href="#">利用規約</a></dd>
+              <dd><a href="#">個人情報保護方針</a></dd>
+              <dd><a href="#">アクセス</a></dd>
+              <dd><a href="#">安全取引センター</a></dd>
+              <dd><a href="#">Qsafeプログラム</a></dd>
+            </dl>
+            <dl>
+              <dt>ツール</dt>
+              <dd><a href="#">QSM（販売管理ツール）</a></dd>
+              <dd><a href="#">Qpost（顧客管理ツール）</a></dd>
+              <dd><a href="#">モバイルアプリケーション</a></dd>
+              <dt>EZショッピング</dt>
+              <dd><a href="#">カート</a></dd>
+              <dd><a href="#">お気に入り商品</a></dd>
+              <dd><a href="#">最近見た商品</a></dd>
+            </dl>
+            <dl>
+              <dt>会社概要</dt>
+              <dd><a href="#">会社概要</a></dd>
+              <dd class="new"><a href="#">採用情報</a></dd>
+              <dd><a href="#">プレスリリース</a></dd>
+              <dd><a href="#">お知らせ</a></dd>
+              <dd><a href="#" rel="nofollow">Qoo10の Facebook</a></dd>
+              <dd><a href="#" rel="nofollow">Qoo10の Twitter</a></dd>
+              <dd><a href="#" rel="nofollow">Qoo10の Instagram</a></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 푸터 -->
+    <div class="footer">
+      <address>Copyright ©2019 <strong>イーベイ</strong> All Rights Reserved.<br>In cooperation with <span class="ebay"><em
+            class="blind">ebay</em></span></address>
+      <div class="sponsor">
+        <!-- 신용사이트 인증 로고 -->
+        <a class="pcidss" href="#">
+          <img src="images/logo_pcidss.png" width="80" height="65" alt="PCI DSS">
+        </a>
+      </div>
+    </div>
+    <!-- //푸터 -->
+  </div>
+  <script id="cateTemplate" type="text/x-jquery-tmpl"> <div class="nav_sub_col">
+      <ul class="nav_sub_lst" role="menu">
+
+        <li class="nav_sub_tit">
+          <a href="#" role="menuitem">${title}</a>
+        </li>
+
+        {{each(i, submenu) list}}
+          <li class="nav_sub_mn">
+            <a href="#" role="menuitem">${submenu}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </script>
+  <script id="allMenuTemplate" type="text/x-jquery-tmpl"> <li><a href="#">${title}</a></li>
+
+
+  </script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
