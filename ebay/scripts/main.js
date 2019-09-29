@@ -1,5 +1,3 @@
-
-
 var ebay = ebay || {};
 
 ebay.util = $.extend({
@@ -9,7 +7,6 @@ ebay.util = $.extend({
 }, ebay.util || {});
 
 ebay.Event = ebay.Event || {};
-
 ebay.View = ebay.View || {};
 ebay.View.main = ebay.View.main || {};
 
@@ -66,6 +63,7 @@ ebay.View.main.slider.prototype = {
     }
     return deferred.promise();
   },
+  // 이해가 잘 가지 않음 ㅠㅠ 설명이 필요
   _onSliderLoad: function (oSlider, nCurrentIndex) {
     this._initializeSlder().done($.proxy(function () {
       this._bPlay = this._slider.auto;
@@ -249,7 +247,6 @@ ebay.View.main.category.prototype = {
       this._welCtgTotalMenu.attr('aria-hidden', 'false');
       this._welCtgTotalLayer.find('.all_menu_wrap').off('keyup').on('keyup', function (e) {
         if (e.keyCode == 27) {
-          console.log(this);
           this._welCtgTotalMenu.hide();
           this._welCtgTotalLayer.find('.btn_nav_all').focus();
           this._welCtgTotalLayer.removeClass('on');
@@ -276,10 +273,19 @@ $(function () {
   }
 
   // category data
-  $.getJSON('./ebayMenu.json', function(data) {
-       $.each(data, function(i, val) {
-        $("#cateTemplate").tmpl(val).appendTo((".cateBox"));
-        $("#allMenuTemplate").tmpl(val).appendTo(".all_menu");
-     });
-   });
+   $.getJSON('./ebayMenu.json', function(data) {
+    var cateSubArea = $('.nav_sub_area');
+
+    cateSubArea.each(function() {
+      var welCateBox = $(this).find('.cateBox');
+      var cateId = welCateBox.data('id');
+
+      $("#cateTemplate").tmpl(data[cateId]).appendTo(welCateBox);
+    });
+
+    $.each(data, function(i, val) {
+      console.log(val);
+      $("#allMenuTemplate").tmpl(val).appendTo(".all_menu");
+    });
+  });
 });
